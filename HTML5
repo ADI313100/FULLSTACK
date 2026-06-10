@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+    <body>
+        <p class="pclass" id="ptag">Paragraph</p>
+        <input type ="text" onchange="myFunction()" id="eventListener">
+        <button onclick="myFunction()">Click Me</button>
+        <button onclick="alert('clicked')">Click Me</button>
+        <p id="ptag"></p>
+        
+    </body>
+    <script src="Dom.js"></script>
+</html>
+
+
