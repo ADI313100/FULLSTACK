@@ -30,3 +30,29 @@ const newvar = document.createElement("hi");
 newvar.textcontent = "New paragraph";
 document.body.appendChild(newvar);
 newvar.removeChild();
+
+
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise resolved");
+    }, 2000);
+});
+
+
+
+
+const promise = new Promise((resolve, reject) => {
+    const success = true;
+    if(Success){
+        Console.log("Done");
+    }
+    else{
+        Console.log("Error");
+    }
+promise.then(res=>{console.log(res)}).catch(err=>{console.log(err)});
+
+
+const example1 = ()=>{
+    console.log("Hello");
+}
