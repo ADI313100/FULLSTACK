@@ -35,32 +35,4 @@ if (input && output) {
 const newvar = document.createElement("h1"); 
 newvar.textContent = "New paragraph";
 document.body.appendChild(newvar);
-
-// Fixed removal method
-newvar.remove(); 
-
-// First Promise
-const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Promise resolved");
-    }, 2000);
-});
-promise.then(res => { console.log(res); }).catch(err => { console.log(err); });
-
-// Second Promise (Renamed variable to prevent duplicate error)
-const promise2 = new Promise((resolve, reject) => {
-    const success = true;
-    if (success) { // Fixed lowercase 'success'
-        console.log("Done"); // Fixed lowercase 'console'
-        resolve("Success payload");
-    } else {
-        console.log("Error"); // Fixed lowercase 'console'
-        reject("Error payload");
-    }
-}); // Added missing closing parenthesis/bracket
-promise2.then(res => { console.log(res); }).catch(err => { console.log(err); });
-
-function example1() {
-    console.log("Hello");
-} 
-
+newvar.removeChild();
