@@ -1,13 +1,18 @@
-import React from 'react';
-import First from './First'; 
+import React from "react";
+import Home from "./home.js";
+import About from "./About.js";
+import Contact from "./Contact.js";
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      {/* This renders your component */}
-      <First /> 
-    </div>
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
   );
 }
+
 
 export default App;

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        #messages {
+            margin-top: 20px;
+        }
+
+        .message {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #status {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dynamic Message Board</h1>
+
+    <input type="text" id="messageInput" placeholder="Enter message">
+
+    <button id="addBtn">Add Message</button>
+
+    <button id="clearBtn">Clear All Messages</button>
+
+    <p id="charCount">Character Count: 0</p>
+
+    <div id="messages"></div>
+
+    <p id="status"></p>
+
+    <script>
+
+        const input = document.getElementById("messageInput");
+        const addBtn = document.getElementById("addBtn");
+        const clearBtn = document.getElementById("clearBtn");
+        const messagesDiv = document.getElementById("messages");
+        const status = document.getElementById("status");
+
+        let messages = [];
+
+        input.addEventListener("input", () => {
+            document.getElementById("charCount").textContent =
+                "Character Count: " + input.value.length;
+        });
+
+        // Display messages
+        function displayMessages() {
+
+            messagesDiv.innerHTML = "";
+
+            messages.forEach((msg, index) => {
+
+                const messageElement =
+                    document.createElement("div");
+
+                messageElement.className = "message";
+                messageElement.textContent = msg;
+
+                messagesDiv.appendChild(messageElement);
+
+                setTimeout(() => {
+
+                    const removeIndex =
+                        messages.indexOf(msg);
+
+                    if (removeIndex !== -1) {
+
+                        messages.splice(removeIndex, 1);
+
+                        displayMessages();
+
+                        status.textContent =
+                            "Message Expired";
+                    }
+
+                }, 10000);
+
+            });
+        }
+
+        addBtn.addEventListener("click", () => {
+
+            const message = input.value.trim();
+
+            const messagePromise =
+                new Promise((resolve, reject) => {
+
+                    if (message.length >= 3) {
+                        resolve(message);
+                    } else {
+                        reject(
+                          "Message must contain at least 3 characters"
+                        );
+                    }
+                });
+
+            messagePromise
+                .then((msg) => {
+
+                    messages.push(msg);
+
+                    status.textContent =
+                        "Message Added Successfully";
+
+                    displayMessages();
+
+                    input.value = "";
+
+                    document.getElementById("charCount")
+                        .textContent =
+                        "Character Count: 0";
+                })
+                .catch((error) => {
+
+                    status.textContent = error;
+
+                });
+        });
+
+        clearBtn.addEventListener("click", () => {
+
+            messages = [];
+
+            messagesDiv.innerHTML = "";
+
+            status.textContent =
+                "All Messages Cleared";
+
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- if (messages.length >= 5) {
+    status.textContent = "Maximum 5 messages allowed";
+    return;
+}
+
+messages.push(message); -->
+
+<!-- messages.push(message); -->

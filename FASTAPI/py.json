@@ -1,0 +1,7 @@
+{   "name":"Adithya",
+    "age":85,
+    "Salary":100000,
+    "role":"informationSecurityManager"
+}
+with open("data.json", "w") as f:
+    json.dump(d, f)
