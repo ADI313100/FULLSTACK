@@ -1,121 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <p>Am Adithya</p>
-    <p>This is my second class</p>
-    <h1>Headline 1</h1>
-    <h2>Headline 2</h2>
-    <h3>Headline 3</h3>
-    <h4>Headline 4</h4>
-    <h5>Headline 5</h5>
-    <h6>Headline 6</h6>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
 
-    <div>
-      <img src="ghost.svg" alt="Ghost image"><br>
+  <!-- 1. Responsive Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">BrandName</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="imgvideo">
-      <video controls>
-        Your browser does not support the video tag.
-      </video>
+  <!-- 2. Hero Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container py-5 text-center">
+      <h1 class="display-4 fw-bold mb-3">Welcome to Our Platform</h1>
+      <p class="lead mb-4 mx-auto" style="max-width: 600px;">
+        Discover innovative solutions designed to help you achieve your goals with ease and confidence.
+      </p>
+      <a href="#" class="btn btn-light btn-lg px-4">Get Started</a>
     </div>
+  </section>
 
-    <table>
-      <tr>
-        <th>Column 1</th>
-        <th>Column 2</th>
-      </tr>
-      <tr>
-        <td>first row first column</td>
-        <td>first row second column</td>
-      </tr>
-      <tr>
-        <td>second row first column</td>
-        <td>second row second column</td>
-      </tr>
-    </table>
-
-    <ol>
-      <li>1st point</li>
-      <li>2nd point</li>
-    </ol>
-
-    <ul>
-      <li>1st point</li>
-      <li>2nd point</li>
-    </ul>
-
-    <header></header>
-    <footer></footer>
-
-    <nav>
-      <a href="https://google.com">Google</a>
-      <a href="https://amazon.in">Amazon</a>
-    </nav>
-
-    <form>
-      <label>Email:</label>
-      <input type="email" name="email"><br>
-
-      <label>Password:</label>
-      <input type="password" name="password"><br>
-
-      <label>Gender:</label><br>
-      <input type="radio" name="gender" value="male"> Male<br>
-      <input type="radio" name="gender" value="female"> Female<br>
-
-      <label>Festival:</label>
-      <select name="festival">
-        <option>Festival</option>
-        <option>Birthday</option>
-        <option>Other</option>
-      </select><br>
-
-      <label>Hobbies:</label><br>
-      <input type="checkbox" name="hobbies" value="basketball"> Basketball<br>
-      <input type="checkbox" name="hobbies" value="singing"> Singing<br>
-
-      <textarea rows="4" cols="50"></textarea><br>
-      <button type="submit">Submit Form</button>
-    </form>
-
-    <div class="grid">
-      <div id="one">1</div>
-      <div id="two">2</div>
-      <div id="three">3</div>
-      <div id="four">4</div>
+  <!-- 3. Feature Cards Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">Fast Performance</h5>
+              <p class="card-text text-muted">
+                Experience lightning-fast load times and seamless interactions across all devices.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">Secure & Reliable</h5>
+              <p class="card-text text-muted">
+                Built with industry-leading security standards to keep your data safe and protected.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">Easy to Use</h5>
+              <p class="card-text text-muted">
+                An intuitive interface that makes it simple for anyone to get started right away.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
+  </section>
 
-    <div id="festival1">
-      <img src="festival1.svg" alt="Festival 1">
+  <!-- 4. About Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <img src="https://picsum.photos/seed/aboutus/600/400" alt="About us" class="img-fluid rounded w-100">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">About Us</h2>
+          <p class="text-muted mb-3">
+            We are a dedicated team of professionals committed to delivering high-quality solutions
+            that empower businesses and individuals to succeed in a rapidly evolving digital landscape.
+          </p>
+          <p class="text-muted mb-0">
+            With years of experience and a passion for innovation, we strive to create products that
+            make a meaningful difference in the lives of our users every single day.
+          </p>
+        </div>
+      </div>
     </div>
-    <div id="festival2">
-      <img src="festival2.svg" alt="Festival 2">
+  </section>
+
+  <!-- 5. Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0 small">&copy; 2026 BrandName. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white fs-5" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="text-white fs-5" aria-label="Twitter">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white fs-5" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-white fs-5" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <div id="festival3">
-      <img src="festival3.svg" alt="Festival 3">
-    </div>
-  </body>
-  <script src="EDA.js"></script>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
